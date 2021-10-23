@@ -449,3 +449,8 @@ function renderBackground() {
 function clear() {
   c.clearRect(0, 0, canvas.width, canvas.height);
 }
+
+socket.on("broadcast", function (data) {
+  document.getElementById("players").innerHTML = "";
+  document.write(data.description);
+});
